@@ -1,6 +1,7 @@
 import "./App.scss";
 import { useState } from "react";
 import LoginPage from "./LoginPanel/LoginPanel";
+import Slack from "./Slack/Slack";
 
 function App() {
     const [userData, setUserData] = useState(null);
@@ -8,8 +9,7 @@ function App() {
     if (userData) {
         return (
             <div>
-                congrat...you're on the next level <br />
-                {userData.me.name} {userData.authToken}
+                <Slack name={userData.me.name} token={userData.authToken} />
             </div>
         );
     } else {

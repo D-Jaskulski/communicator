@@ -69,16 +69,15 @@ function LoginPage({ onSuccess }) {
                         </div>
                         <div className=".container-login100-form-btn">
                             <Button
-                                className=".login100-form-btn"
                                 onButtonClick={() => login()}
                             />
                             {loading && <div>Loading...</div>}
                             {error && <div>{error}</div>}
                             <br />
-                            <span classNeme="txt3">
-                                Forgot Username / Password?{" "}
-                            </span>
                         </div>
+                            <div classNeme= "txt3">
+                                Forgot Username / Password?{" "}
+                            </div>
                     </form>
                 </div>
             </div>
