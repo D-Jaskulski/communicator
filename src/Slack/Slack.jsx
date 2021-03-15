@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Slack.module.scss";
 import ChannelsList from "./ChannelsList";
-import Messages from "./Messages";
+import Messages from "./messages/Messages";
 
 function Slack({ userData }) {
     const [currentChannelId, setCurrentChannelId] = useState(null);

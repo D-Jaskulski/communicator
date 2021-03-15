@@ -1,0 +1,12 @@
+.messagesContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .displayedMessages {
+        flex: 1;
+    }
+    .inputContainer {
+        flex: 0;
+    }
+}
