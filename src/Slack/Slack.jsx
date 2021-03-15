@@ -1,28 +1,32 @@
-import React from "react";
-import "./Slack.scss";
+import React, { useState } from "react";
+import styles from "./Slack.module.scss";
+import ChannelsList from "./ChannelsList";
+import Messages from "./Messages";
 
-const Slack =({name, token}) => {
+function Slack({ userData }) {
+    const [currentChannelId, setCurrentChannelId] = useState(null);
     return (
-    <div className = "chat-main-style">
-        <div className= "chat-navigation-panel">
-            <div className= "user-name">
-            {name} {token}
+        <div className={styles.container}>
+            <div className={styles.channelsList}>
+                <ChannelsList
+                    token={userData.authToken}
+                    userId={userData.userId}
+                    name={userData.me.name}
+                    setCurrentChannel={setCurrentChannelId}
+                    currentChannelId={currentChannelId}
+                />
             </div>
-            <input
-                className="look-up"
-                type = "text"
-                placeholder="jump to">
-            </input>
-            <div className = "channels-style">
-                <label className="channels-headers">Channels</label>
-                <li>front-end devs</li>
-                <li>graphic-designers</li>
-                <li>travels</li>
-                <li>human resources</li>
+            <div className={styles.messages}>
+                {currentChannelId && (
+                    <Messages
+                        channelId={currentChannelId}
+                        token={userData.authToken}
+                        userId={userData.userId}
+                    />
+                )}
             </div>
         </div>
-    </div>
-    )
+    );
 }
 
 export default Slack;

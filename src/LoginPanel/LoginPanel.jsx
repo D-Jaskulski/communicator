@@ -1,4 +1,4 @@
-import "./LoginPanel.styles.scss";
+import styles from "./LoginPanel.module.scss";
 import React, { useState } from "react";
 import Button from "./Button";
 
@@ -34,50 +34,49 @@ function LoginPage({ onSuccess }) {
     };
 
     return (
-        <div className="limiter">
-            <div className="container-login100">
-                <div className="wrap-login100">
-                    <div className="login100-pic data-tilt"></div>
-                    <form className="login100-form validate-form">
-                        <span className="login100-form-title">
+        <div className={styles.limiter}>
+            <div className={styles.containerLogin100}>
+                <div className={styles.wrapLogin100}>
+                    <div className={styles.picture}></div>
+                    <form className={styles.login100FormValidateForm}>
+                        <span className={styles.login100FormTitle}>
                             Member Login
                         </span>
                         <div>
                             <input
-                                className="input100"
+                                className={styles.input100}
                                 type="text"
                                 name="email"
                                 value={username}
                                 placeholder="Email"
                                 onChange={(e) => setUsername(e.target.value)}
                             ></input>
-                            <span className="focus-input100"></span>
+                            <span className={styles.focusInput100}></span>
                         </div>
                         <div
-                            class="wrap-input100 validate-input"
+                            className={styles.wrapInput100ValidateInput}
                             data-validate="Password is required"
                         >
                             <input
-                                className="input100"
+                                className={styles.input100}
                                 type="password"
                                 name="pass"
                                 value={password}
                                 placeholder="Password"
                                 onChange={(e) => setPassword(e.target.value)}
                             ></input>
-                            <span className="focus-input100"></span>
+                            <span className={styles.focusInput100}></span>
                         </div>
-                        <div className=".container-login100-form-btn">
-                            <Button
-                                onButtonClick={() => login()}
-                            />
-                            {loading && <div>Loading...</div>}
-                            {error && <div>{error}</div>}
-                            <br />
-                        </div>
-                            <div classNeme= "txt3">
-                                Forgot Username / Password?{" "}
+                        <div className={styles.containerLogin100FormBtn}>
+                            <div className={styles.login100FormBtn}>
+                                <Button onButtonClick={() => login()} />
+                                {loading && <div>Loading...</div>}
+                                {error && <div>{error}</div>}
                             </div>
+                        </div>
+                        <div className={styles.txt3}>
+                            Forgot Username / Password?{" "}
+                        </div>
                     </form>
                 </div>
             </div>

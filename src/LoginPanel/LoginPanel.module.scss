@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 
-.container-login100 {
+.containerLogin100 {
     width: 100%;
     min-height: 100vh;
     display: -webkit-box;
@@ -21,7 +21,7 @@
     background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
     background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
-.wrap-login100 {
+.wrapLogin100 {
     width: 960px;
     height: 500px;
     background: #fff;
@@ -36,16 +36,20 @@
     justify-content: space-between;
     padding: 177px 130px 33px 95px;
 }
-.login100-pic {
+.picture {
     width: 316px;
     height: 300px;
     background: url("img-01.png");
+    // transition: transform 0.2s ease-in-out;
+    // :hover {
+    //     transform: scale(0.5);
+    // }
 }
-.login100-form {
+.login100Form {
     width: 316px;
     height: 300px;
 }
-.login100-form-title {
+.login100FormTitle {
     font-family: Poppins-Bold;
     font-size: 24px;
     color: #333;
@@ -55,10 +59,10 @@
     display: block;
     padding-bottom: 15px;
 }
-.validate-input {
+.validateInput {
     position: relative;
 }
-.wrap-input100 {
+.wrapInput100 {
     position: relative;
     width: 100%;
     z-index: 1;
@@ -78,7 +82,7 @@
     border: 2px solid grey;
     margin: 5px;
 }
-.focus-input100 {
+.focusInput100 {
     display: block;
     position: absolute;
     border-radius: 25px;
@@ -90,7 +94,7 @@
     box-shadow: 0 0;
     color: rgba(87, 184, 70, 0.8);
 }
-.symbol-input100 {
+.symbolInput100 {
     font-size: 15px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -107,19 +111,17 @@
     padding-left: 35px;
     pointer-events: none;
     color: #666;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
 }
-.container-login100-form-btn {
+.containerLogin100FormBtn {
     display: flex;
     width: 100%;
-    padding-top: 10px;
-    align-items: center;
     justify-items: center;
+    transition: transform 1s ease-in-out;
+    :hover {
+        transform: scale(1.1);
+    }
 }
-.login100-form-btn {
+.login100FormBtn {
     display: flex;
     font-family: Montserrat-Bold;
     font-size: 15px;
@@ -136,10 +138,10 @@
     border: 0px;
     margin: 10px;
 }
-.text-center {
+.textCenter {
     text-align: center;
 }
-.p-t-12 {
+.pT12 {
     padding-top: 12px;
 }
 .txt1 {
@@ -156,7 +158,7 @@
 }
 .txt3 {
     font-family: Poppins-Regular;
-    font-size: 7px;
+    font-size: 15px;
     line-height: 1.5;
     color: #666;
 }
