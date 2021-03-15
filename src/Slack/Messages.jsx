@@ -24,7 +24,7 @@ function Messages({ channelId, token, userId }) {
         <div>
             Current channel:
             {channelId}
-            {messages.u.map((message) => (
+            {messages.map((message) => (
                 <div>
                     {message.u.name} : {message.msg}
                 </div>
