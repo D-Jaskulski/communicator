@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { API_URL } from "../../api";
-function MessagesInput(token, userId, channelId, updateMessages) {
+function MessagesInput({ token, userId, channelId, updateMessages }) {
     const [message, setMessage] = useState(" ");
 
     const sendMessage = () => {
