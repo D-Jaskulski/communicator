@@ -30,7 +30,10 @@ function ChannelsList({
             <div>{name}</div>
             <h3>Channels list:</h3>
             {channelsList.map((channel) => (
-                <h4 onClick={() => setCurrentChannel(channel._id)}>
+                <h4
+                    // className = {? "klasa1": "klasa2"}
+                    onClick={() => setCurrentChannel(channel._id)}
+                >
                     {channel.name}
                     {currentChannelId === channel._id ? "V" : ""}
                 </h4>

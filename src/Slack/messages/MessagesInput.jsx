@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { API_URL } from "../../api";
+import styles from "./Messages.module.scss";
+
 function MessagesInput({ token, userId, channelId, updateMessages }) {
     const [message, setMessage] = useState(" ");
 
@@ -20,8 +22,8 @@ function MessagesInput({ token, userId, channelId, updateMessages }) {
         });
     };
     return (
-        <div>
-            <input
+        <div >
+            <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
             />

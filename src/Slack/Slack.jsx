@@ -16,6 +16,7 @@ function Slack({ userData }) {
                     currentChannelId={currentChannelId}
                 />
             </div>
+
             <div className={styles.messages}>
                 {currentChannelId && (
                     <Messages
